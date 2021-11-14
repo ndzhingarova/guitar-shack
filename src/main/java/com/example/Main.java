@@ -19,9 +19,10 @@ package com.example;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @SpringBootApplication
 public class Main {
 
@@ -29,9 +30,13 @@ public class Main {
     SpringApplication.run(Main.class, args);
   }
 
-  @RequestMapping("/")
+  @GetMapping("/")
   String index() {
     return "Hello World!";
   }
 
+  @GetMapping("/hello")
+  String hello() {
+    return "Hello World!";
+  }
 }
