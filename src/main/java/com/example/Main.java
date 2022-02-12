@@ -31,7 +31,7 @@ public class Main {
 
   @GetMapping("/")
   String index() {
-    return "Hello World!";
+    return "Welcome to guitar Shack!";
   }
 
 }
