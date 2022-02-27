@@ -15,7 +15,7 @@ public class StockMonitor {
     public void onSale(int productId, int quantity) {
         Product product = warehouse.findById(productId);
         if (product.getStock() - quantity <= restockLevel.forProduct(product)) {
-            alert.send("");
+            alert.send("Please order more of product " + productId);
         }
     }
 }

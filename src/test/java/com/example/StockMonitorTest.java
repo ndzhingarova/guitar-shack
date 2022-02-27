@@ -15,7 +15,7 @@ public class StockMonitorTest {
 
         stockMonitor.onSale(811, 1);
 
-        verify(alert).send(any());
+        verify(alert).send("Please order more of product 811");
     }
 
     @Test
