@@ -1,6 +1,9 @@
 package abstractTests;
 
+import com.example.Product;
 import com.example.SalesData;
+import com.example.Warehouse;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -19,4 +22,5 @@ public abstract class AbstractSalesDataTest {
     }
 
     protected abstract SalesData createSalesData();
+
 }
