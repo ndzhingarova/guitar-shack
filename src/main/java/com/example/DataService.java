@@ -8,7 +8,7 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 
-public class DataService {
+public class DataService<T> {
     private final String baseUrl;
     private final HttpClient httpClient;
     private final ObjectMapper objectMapper;
@@ -19,17 +19,17 @@ public class DataService {
         this.objectMapper = objectMapper;
     }
 
-    SalesTotal getObject(String queryString) {
-        SalesTotal salesTotal = new SalesTotal();
+    T getObject(String queryString, Class<T> valueType) {
+        T result = null;
         HttpGet request = new HttpGet(baseUrl + queryString);
         try {
             HttpResponse response = httpClient.execute(request);
             String responseString = EntityUtils.toString(response.getEntity());
 
-            salesTotal = objectMapper.readValue(responseString, SalesTotal.class);
+            result = objectMapper.readValue(responseString, valueType);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return salesTotal;
+        return result;
     }
 }
