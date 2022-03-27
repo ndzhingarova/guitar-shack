@@ -8,7 +8,7 @@ public class RestockLevelTest {
     @Test
     public void leadTimeMultipliedByAverageDailySales() {
         SalesHistory salesHistory = product -> 15;
-        Product product = new Product(7, 14);
+        Product product = new Product(811, 7, 14);
         RestockLevel restockLevel = new ProductRestockLevel(salesHistory);
 
         Assert.assertEquals(7, restockLevel.forProduct(product));

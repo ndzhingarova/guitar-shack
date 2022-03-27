@@ -7,7 +7,7 @@ public class StockMonitorTest {
 
     @Test
     public void sendAlertOnSaleWhenRestockLevelReached () {
-        Product product = new Product(25, 14);
+        Product product = new Product(811, 25, 14);
         Warehouse warehouse = id -> product;
         RestockLevel restockLevel = product1 -> 24;
         Alert alert = mock(Alert.class);
@@ -20,7 +20,7 @@ public class StockMonitorTest {
 
     @Test
     public void noAlertSentWhenRestockLevelNotReached () {
-        Product product = new Product(26, 14);
+        Product product = new Product(811, 26, 14);
         Warehouse warehouse = id -> product;
         RestockLevel restockLevel = product1 -> 24;
         Alert alert = mock(Alert.class);

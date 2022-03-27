@@ -22,7 +22,7 @@ public class SalesHistoryTest {
         when(salesData.forDateRange(anyInt(), any(), any())).thenReturn(15);
         today = () -> LocalDate.parse("2022-02-27");
         salesHistory = new ThirtyDaysSalesHistory(salesData, today);
-        product = new Product(0, 0);
+        product = new Product(811, 0, 0);
     }
 
     @Test

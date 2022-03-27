@@ -1,11 +1,15 @@
 package com.example;
 
 public class Product {
-    private final int stock;
-    private final int leadTime;
+    private int stock;
+    private int leadTime;
+    private int id;
 
-    public Product(int stock, int leadTime) {
+    public Product() {
+    }
 
+    public Product(int id, int stock, int leadTime) {
+        this.id = id;
         this.stock = stock;
         this.leadTime = leadTime;
     }
@@ -16,5 +20,9 @@ public class Product {
 
     public int getLeadTime() {
         return leadTime;
+    }
+
+    public int getId() {
+        return id;
     }
 }
