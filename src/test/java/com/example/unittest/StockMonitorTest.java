@@ -1,5 +1,6 @@
-package com.example;
+package com.example.unittest;
 
+import com.example.*;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 

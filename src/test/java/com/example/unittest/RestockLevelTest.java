@@ -1,5 +1,9 @@
-package com.example;
+package com.example.unittest;
 
+import com.example.Product;
+import com.example.ProductRestockLevel;
+import com.example.RestockLevel;
+import com.example.SalesHistory;
 import org.junit.Assert;
 import org.junit.Test;
 

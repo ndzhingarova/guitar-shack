@@ -1,4 +1,4 @@
-package abstractTests;
+package com.example.abstractTests;
 
 
 import com.example.Product;

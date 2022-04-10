@@ -1,6 +1,6 @@
-package integration;
+package com.example.integration;
 
-import abstractTests.AbstractWarehouseTest;
+import com.example.abstractTests.AbstractWarehouseTest;
 import com.example.DataService;
 import com.example.GuitarShackWarehouse;
 import com.example.Warehouse;

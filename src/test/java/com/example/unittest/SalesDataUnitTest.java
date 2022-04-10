@@ -1,6 +1,7 @@
-package com.example;
+package com.example.unittest;
 
-import abstractTests.AbstractSalesDataTest;
+import com.example.abstractTests.AbstractSalesDataTest;
+import com.example.SalesData;
 
 public class SalesDataUnitTest extends AbstractSalesDataTest {
     @Override

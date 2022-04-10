@@ -1,6 +1,6 @@
-package integration;
+package com.example.integration;
 
-import abstractTests.AbstractSalesDataTest;
+import com.example.abstractTests.AbstractSalesDataTest;
 import com.example.DataService;
 import com.example.GuitarShackSalesData;
 import com.example.SalesData;
@@ -14,7 +14,7 @@ public class SalesDataTest extends AbstractSalesDataTest {
     protected SalesData createSalesData() {
         final String baseUrl = "https://gjtvhjg8e9.execute-api.us-east-2.amazonaws.com/default/sales";
         SalesData salesData = new GuitarShackSalesData(
-                new DataService(baseUrl,
+                new DataService<>(baseUrl,
                         HttpClients.createDefault(),
                         new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)));
         return salesData;

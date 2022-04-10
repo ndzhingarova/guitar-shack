@@ -1,5 +1,6 @@
-package com.example;
+package com.example.unittest;
 
+import com.example.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,7 +18,7 @@ public class SalesHistoryTest {
     private Product product;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         salesData = mock(SalesData.class);
         when(salesData.forDateRange(anyInt(), any(), any())).thenReturn(15);
         today = () -> LocalDate.parse("2022-02-27");

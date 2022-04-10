@@ -1,9 +1,6 @@
-package abstractTests;
+package com.example.abstractTests;
 
-import com.example.Product;
 import com.example.SalesData;
-import com.example.Warehouse;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
