@@ -22,8 +22,6 @@
     <webjars-bootstrap.version>4.1.3</webjars-bootstrap.version>
     <webjars-jquery-ui.version>1.12.1</webjars-jquery-ui.version>
     <webjars-jquery.version>3.3.1-1</webjars-jquery.version>
-    <testGroup></testGroup>
-    <surefire.version>3.0.0-M5</surefire.version>
   </properties>
 
   <dependencies>
@@ -77,12 +75,6 @@
       <artifactId>httpclient</artifactId>
       <version>4.5.13</version>
     </dependency>
-    <dependency>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <version>${surefire.version}</version>
-      <type>maven-plugin</type>
-    </dependency>
   </dependencies>
 
   <build>
@@ -105,16 +97,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>${surefire.version}</version>
-        <configuration>
-          <includes>
-            <include>**/${testGroup}/*Test.java</include>
-          </includes>
-        </configuration>
       </plugin>
     </plugins>
   </build>
