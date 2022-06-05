@@ -13,7 +13,6 @@ import static org.mockito.Mockito.*;
 public class SalesHistoryTest {
 
     private SalesData salesData;
-    private Today today;
     private SalesHistory salesHistory;
     private Product product;
 
@@ -21,7 +20,7 @@ public class SalesHistoryTest {
     public void setUp() {
         salesData = mock(SalesData.class);
         when(salesData.forDateRange(anyInt(), any(), any())).thenReturn(15);
-        today = () -> LocalDate.parse("2022-02-27");
+        Today today = () -> LocalDate.parse("2022-02-27");
         salesHistory = new ThirtyDaysSalesHistory(salesData, today);
         product = new Product(811, 0, 0);
     }
