@@ -13,8 +13,8 @@ import java.time.LocalDate;
 
 public class StockMonitorIntegrationTest {
 
-    private static String productBaseUrl = "https://6hr1390c1j.execute-api.us-east-2.amazonaws.com/default/product";
-    private static String salesBaseURl = "https://gjtvhjg8e9.execute-api.us-east-2.amazonaws.com/default/sales";
+    private static final String productBaseUrl = "https://6hr1390c1j.execute-api.us-east-2.amazonaws.com/default/product";
+    private static final String salesBaseURl = "https://gjtvhjg8e9.execute-api.us-east-2.amazonaws.com/default/sales";
 
     @Test
     public void sendAlertOnSaleWhenRestockLevelReached() {
