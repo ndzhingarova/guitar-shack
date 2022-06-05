@@ -10,7 +10,7 @@ public class ThirtyDaysSalesHistory implements SalesHistory {
     }
 
     @Override
-    public int totalSales(Product product) {
-        return salesData.forDateRange(0, today.get().minusDays(30), today.get());
+    public int last30DaysSales(Product product) {
+        return salesData.forDateRange(product.getId(), today.get().minusDays(30), today.get());
     }
 }

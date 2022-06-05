@@ -8,7 +8,4 @@ public class SalesTotal {
         return total;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
-    }
 }

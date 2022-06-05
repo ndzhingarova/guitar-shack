@@ -1,5 +1,5 @@
 package com.example;
 
 public interface SalesHistory {
-    int totalSales(Product product);
+    int last30DaysSales(Product product);
 }

@@ -29,7 +29,7 @@ public class SalesHistoryTest {
     @Test
     public void startDateThirtyDaysAgo() {
         LocalDate startDate = LocalDate.parse("2022-01-28");
-        salesHistory.totalSales(product);
+        salesHistory.last30DaysSales(product);
 
         verify(salesData).forDateRange(anyInt(), eq(startDate), any());
     }
@@ -37,13 +37,13 @@ public class SalesHistoryTest {
     @Test
     public void endDateToday() {
         LocalDate endDate = LocalDate.parse("2022-02-27");
-        salesHistory.totalSales(product);
+        salesHistory.last30DaysSales(product);
 
         verify(salesData).forDateRange(anyInt(), any(), eq(endDate));
     }
 
     @Test
     public void returnSalesTotal() {
-        assertEquals(15, salesHistory.totalSales(product));
+        assertEquals(15, salesHistory.last30DaysSales(product));
     }
 }

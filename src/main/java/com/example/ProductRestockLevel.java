@@ -10,6 +10,8 @@ public class ProductRestockLevel implements RestockLevel {
 
     @Override
     public int forProduct(Product product) {
-        return (int) ((salesHistory.totalSales(product) / 30.0) * (double) product.getLeadTime());
+        final double dailySales = salesHistory.last30DaysSales(product) / 30.0;
+        final double leadTimeExpectedSales = dailySales * (double) product.getLeadTime();
+        return (int) leadTimeExpectedSales;
     }
 }

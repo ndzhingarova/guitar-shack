@@ -116,6 +116,11 @@
           </includes>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.pitest</groupId>
+        <artifactId>pitest-maven</artifactId>
+        <version>1.7.5</version>
+      </plugin>
     </plugins>
   </build>
 

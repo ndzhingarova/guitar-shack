@@ -1,4 +1,4 @@
-package com.example.integration;
+package com.example.contract;
 
 import com.example.abstractTests.AbstractWarehouseTest;
 import com.example.DataService;
@@ -13,11 +13,10 @@ public class WarehouseTest extends AbstractWarehouseTest {
     @Override
     protected Warehouse createWarehouse() {
         String baseUrl = "https://6hr1390c1j.execute-api.us-east-2.amazonaws.com/default/product";
-        Warehouse warehouse = new GuitarShackWarehouse(
+        return new GuitarShackWarehouse(
                 new DataService<>(
                         baseUrl,
                         HttpClients.createDefault(),
                         new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)));
-        return warehouse;
     }
 }
